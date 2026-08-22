@@ -1,0 +1,53 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Become a Supply Partner | Minnimo Products Pvt. Ltd.</title>
+<style>
+:root{--navy:#071d38;--line:#e7e9ee;--muted:#667085;--teal:#11B8C4;--pink:#FA1971;--orange:#FF7A00}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;color:#172033;background:#f6f8fb}a{color:inherit;text-decoration:none}
+.wrap{width:min(1040px,calc(100% - 32px));margin:auto}
+header{background:white;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+header .wrap{min-height:82px;display:flex;justify-content:space-between;align-items:center;gap:22px}
+.brand-logo img{height:54px;width:auto;display:block}
+.header-actions{display:flex;align-items:center;gap:10px}
+.header-actions a{font-size:12px;font-weight:850;padding:11px 14px;border-radius:8px;transition:.2s}
+.header-actions a:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(7,29,56,.09)}
+.partner-cta{background:#fff;color:#8b5d00;border:1px solid #d9a43a}
+.back-link{border:1px solid var(--line);background:#fff;transition:transform .2s ease,box-shadow .2s ease}
+main{padding:46px 0 58px}.intro{text-align:center;max-width:760px;margin:0 auto 30px}.intro span{font-size:12px;letter-spacing:.14em;font-weight:900;color:#bc7a00}
+h1{font-size:46px;line-height:1.08;margin:10px 0;color:var(--navy)}.intro p{color:var(--muted)}
+form{background:white;border:1px solid var(--line);border-radius:22px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:20px;box-shadow:0 12px 35px rgba(7,29,56,.05)}
+label{font-size:13px;font-weight:800;color:#263043;display:block;margin-bottom:7px}
+input,select,textarea{width:100%;border:1px solid #d8dde5;border-radius:9px;padding:13px 14px;font:inherit;background:#fff}
+input:focus,select:focus,textarea:focus{outline:2px solid rgba(17,184,196,.18);border-color:var(--teal)}
+textarea{min-height:120px;resize:vertical}.full{grid-column:1/-1}.check{display:flex;gap:10px;align-items:flex-start;font-size:12px;color:var(--muted)}.check input{width:auto;margin-top:3px}
+button{border:0;border-radius:9px;background:var(--navy);color:white;padding:15px 22px;font-weight:900;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
+button:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(7,29,56,.16)}
+.note{font-size:12px;color:var(--muted)}.success{display:none;background:#eef8f0;border:1px solid #b9dfc1;padding:16px;border-radius:10px;color:#245d31}
+footer{margin-top:36px;text-align:center;color:#8490a1;font-size:11px}
+@media(max-width:650px){form{grid-template-columns:1fr;padding:22px}.full{grid-column:auto}h1{font-size:36px}.brand-logo img{height:44px}.header-actions .partner-cta{display:none}}
+</style></head><body>
+<header><div class="wrap">
+<a class="brand-logo" href="index.html"><img src="assets/images/brand/minnimo-logo.png" alt="Minnimo Products Pvt. Ltd. logo"></a>
+<div class="header-actions"><a class="back-link" href="index.html">← BACK TO WEBSITE</a><a class="partner-cta" href="#partnerForm">PARTNER WITH US</a></div>
+</div></header>
+<main><div class="wrap"><div class="intro"><span>VENDOR &amp; MANUFACTURER PARTNERSHIP</span><h1>Bring your products to Minnimo.</h1><p>We are interested in hearing from capable vendors and manufacturers with useful consumer products, customisation capabilities and dependable supply. Submit your company details for our team to review.</p></div>
+<form id="partnerForm">
+<div><label>Contact Name *</label><input name="name" required></div>
+<div><label>Company Name *</label><input name="company" required></div>
+<div><label>Designation *</label><input name="designation" required></div>
+<div><label>Mobile Number *</label><input name="mobile" inputmode="tel" required></div>
+<div><label>Email ID *</label><input name="email" type="email" required></div>
+<div><label>GST Number</label><input name="gst" maxlength="15"></div>
+<div><label>Business Type *</label><select name="type" required><option value="">Select</option><option>Manufacturer</option><option>Vendor / Supplier</option><option>Both Manufacturer &amp; Vendor</option></select></div>
+<div><label>City / State *</label><input name="location" required></div>
+<div class="full"><label>Products / Product Categories You Deal With *</label><textarea name="products" required placeholder="Tell us about the products you manufacture or supply..."></textarea></div>
+<div class="full"><label>Manufacturing / Supply Capabilities</label><textarea name="capabilities" placeholder="Customisation, MOQ, production capacity, certifications, private-label capability, etc."></textarea></div>
+<div class="full"><label>Website / Catalogue Link</label><input name="website" placeholder="https://"></div>
+<div class="full check"><input id="consent" type="checkbox" required><label for="consent">I confirm that the information submitted is accurate and I agree that Minnimo Products Pvt. Ltd. may contact me regarding potential business opportunities.</label></div>
+<div class="full"><button type="submit">SUBMIT COMPANY DETAILS →</button><p class="note">This form currently prepares an email submission because no backend/database has been connected yet.</p><div id="success" class="success">Your email application is ready. Please send the opened email to complete your submission.</div></div>
+</form>
+<footer>© 2026 Minnimo Products Pvt. Ltd. · REEPSO — Reinventing Everyday Living</footer>
+</div></main>
+<script>
+const form=document.getElementById('partnerForm');
+form.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form);const body=[...d.entries()].map(([k,v])=>k.toUpperCase()+': '+v).join('\n');window.location.href='mailto:info@minnimo.com?subject='+encodeURIComponent('Minnimo Supply Partner Application - '+d.get('company'))+'&body='+encodeURIComponent(body);document.getElementById('success').style.display='block';});
+</script></body></html>
