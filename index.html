@@ -1,1 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minnimo Products Pvt. Ltd. | Consumer Products & REEPSO</title>
+  <meta name="description" content="Minnimo Products Pvt. Ltd. develops, sources and brings thoughtfully designed consumer products to market under REEPSO.">
+  <meta name="theme-color" content="#111111">
+  <meta property="og:title" content="Minnimo Products Pvt. Ltd.">
+  <meta property="og:description" content="Everyday products. Thoughtfully built. Discover Minnimo and our consumer brand REEPSO.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.minnimo.com/">
+  <link rel="canonical" href="https://www.minnimo.com/">
+  <style>
+    :root {
+      --ink:#111214;
+      --muted:#6d7178;
+      --paper:#ffffff;
+      --soft:#f5f5f2;
+      --line:#e6e6e1;
+      --dark:#121316;
+      --dark2:#1a1b20;
+      --accent:#ff8f1f;
+      --radius:28px;
+      --shadow:0 28px 70px rgba(20,20,20,.10);
+      --max:1200px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#777b81;margin:0 0 16px}
+    h1,h2,h3,p{margin-top:0}
+    h1{font-size:clamp(3rem,7vw,6.9rem);line-height:.94;letter-spacing:-.065em;font-weight:760;margin-bottom:28px}
+    h2{font-size:clamp(2.25rem,4.7vw,4.6rem);line-height:1;letter-spacing:-.05em;margin-bottom:24px}
+    h3{font-size:1.15rem;letter-spacing:-.02em;margin-bottom:10px}
+    p{color:var(--muted)}
+    .lead{font-size:clamp(1.08rem,1.7vw,1.35rem);max-width:720px}
+    .section{padding:112px 0}
+    .section-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:end;margin-bottom:58px}
+    .section-head p{font-size:1.08rem;max-width:700px;margin-bottom:0}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 21px;font-weight:750;border:1px solid var(--ink);transition:.25s ease}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-dark{background:var(--ink);color:white}
+    .btn-light{background:white;color:var(--ink);border-color:white}
+    .btn-ghost{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);color:white}
+    .arrow{font-size:1.1em;transition:transform .25s ease}
+    .btn:hover .arrow,.card-link:hover .arrow{transform:translateX(4px)}
+    header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s ease}
+    header.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(16px);box-shadow:0 1px 0 rgba(0,0,0,.06)}
+    .nav{height:88px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:15px;min-width:220px}
+    .brand img{width:152px;height:54px;object-fit:contain;mix-blend-mode:multiply}
+    .brand small{display:block;font-size:.63rem;line-height:1.15;text-transform:uppercase;letter-spacing:.11em;font-weight:800;color:#767a80;max-width:88px}
+    .links{display:flex;gap:30px;align-items:center;font-size:.88rem;font-weight:700}
+    .links a:not(.btn){position:relative}
+    .links a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:2px;background:var(--ink);transition:.25s}
+    .links a:not(.btn):hover::after{right:0}
+    .menu-btn{display:none;border:0;background:none;font-size:1.5rem}
+    .hero{min-height:100vh;padding:150px 0 60px;display:flex;align-items:center;overflow:hidden;position:relative;background:
+      radial-gradient(circle at 87% 14%,rgba(255,143,31,.12),transparent 25%),
+      radial-gradient(circle at 70% 75%,rgba(55,202,198,.10),transparent 28%),
+      linear-gradient(180deg,#fff 0%,#fafaf8 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:58px;align-items:center}
+    .hero-copy .lead{max-width:650px;margin-bottom:34px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-note{margin-top:28px;font-size:.85rem;color:#8a8d92}
+    .visual{position:relative;min-height:600px}
+    .stage{position:absolute;inset:0;border-radius:42px;background:#131418;overflow:hidden;box-shadow:var(--shadow)}
+    .stage::before{content:"";position:absolute;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,#ff9c37 0%,rgba(255,156,55,.15) 55%,transparent 70%);right:-140px;top:-130px}
+    .stage::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,#2dc6c0 0%,rgba(45,198,192,.12) 58%,transparent 72%);left:-180px;bottom:-210px}
+    .visual-title{position:absolute;top:38px;left:38px;color:white;z-index:2}
+    .visual-title span{display:block;color:#9da1a8;font-size:.78rem;text-transform:uppercase;letter-spacing:.17em;font-weight:800}
+    .visual-title strong{font-size:1.2rem}
+    .float-card{position:absolute;z-index:3;background:#fff;border-radius:24px;padding:22px;box-shadow:0 26px 50px rgba(0,0,0,.22);transition:.35s ease}
+    .float-card:hover{transform:translateY(-7px) rotate(0deg)!important}
+    .c1{width:52%;left:8%;top:30%;transform:rotate(-5deg)}
+    .c2{width:45%;right:8%;top:18%;transform:rotate(5deg)}
+    .c3{width:48%;right:12%;bottom:10%;transform:rotate(-2deg)}
+    .product-icon{height:108px;border-radius:18px;display:grid;place-items:center;font-size:2.2rem;margin-bottom:18px;background:linear-gradient(145deg,#f4f4f0,#e8e8e2)}
+    .float-card small{font-size:.72rem;color:#96999f;text-transform:uppercase;letter-spacing:.13em;font-weight:800}
+    .float-card strong{display:block;font-size:1.05rem;line-height:1.25;margin-top:4px}
+    .brand-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:white}
+    .strip-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+    .strip-item{padding:26px 22px;border-right:1px solid var(--line)}
+    .strip-item:last-child{border-right:0}
+    .strip-item strong{display:block;font-size:.85rem;text-transform:uppercase;letter-spacing:.1em}
+    .strip-item span{font-size:.82rem;color:#888c91}
+    .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:start}
+    .statement{font-size:clamp(1.65rem,3.1vw,3.1rem);line-height:1.15;letter-spacing:-.035em;color:var(--ink);font-weight:620}
+    .about-copy p{font-size:1.06rem}
+    .fact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:34px}
+    .fact{background:var(--soft);border-radius:22px;padding:24px}
+    .fact span{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:#8b8e93;margin-bottom:8px}
+    .fact strong{font-size:1rem}
+    .brand-section{background:var(--dark);color:#fff;overflow:hidden;position:relative}
+    .brand-section p{color:#aeb2b8}
+    .brand-section .eyebrow{color:#81868e}
+    .brand-panel{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+    .brand-mark{background:#fff;border-radius:32px;padding:42px;min-height:300px;display:grid;place-items:center;position:relative}
+    .brand-mark::after{content:"A brand of Minnimo Products Pvt. Ltd.";position:absolute;bottom:22px;left:22px;color:#9ca0a5;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800}
+    .reepso-word{font-size:clamp(3.2rem,7vw,6.2rem);font-weight:850;letter-spacing:-.07em;color:#17181b}
+    .reepso-word .ee{color:#2abdb9} .reepso-word .o{color:#ff921d}
+    .tagline{font-size:1rem;color:#7a7f85;margin-top:-8px;letter-spacing:.04em}
+    .products{background:var(--soft)}
+    .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .product-card{min-height:330px;border-radius:28px;padding:28px;background:white;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;transition:.3s ease;border:1px solid #ecece7}
+    .product-card:hover{transform:translateY(-7px);box-shadow:0 24px 44px rgba(30,30,30,.08)}
+    .orb{position:absolute;width:180px;height:180px;border-radius:50%;right:-45px;top:-45px;background:radial-gradient(circle at 35% 35%,#fff,#e9e9e5 42%,#d5d5ce);opacity:.9}
+    .orb.o2{background:radial-gradient(circle at 35% 35%,#fff8ef,#ffd3a3 48%,#ff9a2f)}
+    .orb.o3{background:radial-gradient(circle at 35% 35%,#eeffff,#9ee2df 48%,#32bdb7)}
+    .product-card .num{font-size:.7rem;letter-spacing:.15em;color:#a0a3a7;font-weight:800}
+    .product-card h3{font-size:1.45rem;max-width:70%;margin-top:82px}
+    .product-card p{font-size:.92rem;max-width:88%;margin-bottom:28px}
+    .card-link{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:800}
+    .process-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .step{padding:36px 18px;border-right:1px solid var(--line);min-height:210px}
+    .step:last-child{border-right:0}
+    .step b{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:white;font-size:.75rem;margin-bottom:36px}
+    .step p{font-size:.84rem;margin:0}
+    .values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:42px}
+    .value{border-top:2px solid var(--ink);padding:24px 4px 0}
+    .value p{font-size:.9rem}
+    .partner{padding:110px 0}
+    .partner-box{border-radius:36px;background:#ecece7;padding:64px;display:grid;grid-template-columns:1fr .9fr;gap:50px;align-items:end}
+    .partner-box h2{max-width:680px;margin-bottom:0}
+    .partner-list{display:flex;flex-wrap:wrap;gap:10px}
+    .pill{background:white;border:1px solid #deded8;border-radius:999px;padding:10px 14px;font-size:.82rem;font-weight:750}
+    .contact{background:var(--dark);color:white;padding:110px 0 34px}
+    .contact p{color:#aeb1b7}
+    .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px}
+    .contact-card{background:var(--dark2);border:1px solid #292b30;border-radius:28px;padding:30px}
+    .contact-row{padding:18px 0;border-bottom:1px solid #2b2d31}
+    .contact-row:last-child{border-bottom:0}
+    .contact-row span{display:block;font-size:.69rem;text-transform:uppercase;letter-spacing:.15em;color:#757981;font-weight:800;margin-bottom:5px}
+    .contact-row a,.contact-row strong{font-size:1rem}
+    .legal{margin-top:72px;border-top:1px solid #282a2e;padding-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:28px;font-size:.79rem;color:#81858c}
+    .legal div:last-child{text-align:right}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.show{opacity:1;transform:none}
+    @media(max-width:950px){
+      .links{display:none;position:absolute;top:78px;left:20px;right:20px;background:white;border-radius:20px;padding:20px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}
+      .links.open{display:flex} .menu-btn{display:block}
+      .brand small{display:none} .brand img{width:138px}
+      .hero{padding-top:125px}
+      .hero-grid,.about-grid,.brand-panel,.partner-box,.contact-grid,.section-head{grid-template-columns:1fr}
+      .visual{min-height:520px} .section-head{gap:12px}
+      .product-grid{grid-template-columns:repeat(2,1fr)}
+      .process-grid{grid-template-columns:repeat(3,1fr)} .step:nth-child(3){border-right:0}
+      .values-grid{grid-template-columns:repeat(2,1fr)}
+      .strip-grid{grid-template-columns:repeat(2,1fr)} .strip-item:nth-child(2){border-right:0}
+    }
+    @media(max-width:620px){
+      .wrap{width:min(100% - 28px,var(--max))}
+      .section{padding:78px 0}
+      .nav{height:74px}
+      .brand img{width:120px;height:46px}
+      .hero{min-height:auto;padding:118px 0 38px}
+      h1{font-size:clamp(3rem,15vw,4.7rem)}
+      .visual{min-height:430px;margin-top:12px}
+      .stage{border-radius:28px}
+      .float-card{padding:16px;border-radius:18px} .product-icon{height:78px;font-size:1.8rem}
+      .c1{width:56%;left:5%;top:34%} .c2{width:49%;right:4%;top:20%} .c3{width:52%;right:7%;bottom:8%}
+      .visual-title{left:24px;top:24px}
+      .strip-grid,.product-grid,.values-grid,.fact-grid{grid-template-columns:1fr}
+      .strip-item{border-right:0;border-bottom:1px solid var(--line)} .strip-item:last-child{border-bottom:0}
+      .product-card{min-height:300px}
+      .process-grid{grid-template-columns:repeat(2,1fr)} .step:nth-child(2n){border-right:0} .step:nth-child(3){border-right:1px solid var(--line)}
+      .step{min-height:180px}
+      .brand-mark{min-height:230px;padding:26px}
+      .partner-box{padding:32px 24px}
+      .legal{grid-template-columns:1fr} .legal div:last-child{text-align:left}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto} .reveal{opacity:1;transform:none;transition:none}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Minnimo Products Pvt. Ltd.",
+    "url":"https://www.minnimo.com/",
+    "email":"info@minnimo.com",
+    "telephone":"+91-96534-23232",
+    "taxID":"27AAVCM0632N1ZW",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"A206, 2nd Floor, Krishvi Escape, Sitaram Poddar Marg, Kalbadevi",
+      "addressLocality":"Mumbai",
+      "postalCode":"400002",
+      "addressRegion":"Maharashtra",
+      "addressCountry":"IN"
+    },
+    "brand":{"@type":"Brand","name":"REEPSO","url":"https://www.reepso.com/"}
+  }
+  </script>
+</head>
+<body>
+<header id="header">
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Minnimo Products home">
+      <img src="data:image/jpeg;base64,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" alt="Minnimo logo">
+      <small>Products Pvt. Ltd.</small>
+    </a>
+    <nav class="links" id="links" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#brand">Our Brand</a>
+      <a href="#products">Products</a>
+      <a href="#process">What We Do</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-dark" href="https://www.reepso.com/" target="_blank" rel="noopener">Visit REEPSO <span class="arrow">↗</span></a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</header>
 
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Minnimo Products Pvt. Ltd.</p>
+        <h1>Everyday products.<br>Thoughtfully built.</h1>
+        <p class="lead">We develop, source and bring to market practical consumer products designed around modern everyday living — from home organisation and travel to lifestyle utilities and smart electronics.</p>
+        <div class="hero-actions">
+          <a class="btn btn-dark" href="#products">Explore what we do <span class="arrow">↓</span></a>
+          <a class="btn" href="https://www.reepso.com/" target="_blank" rel="noopener">Discover REEPSO <span class="arrow">↗</span></a>
+        </div>
+        <p class="hero-note">Our consumer brand: <strong>REEPSO — Reinventing Everyday Living.</strong></p>
+      </div>
+      <div class="visual reveal" aria-label="Consumer product category showcase">
+        <div class="stage">
+          <div class="visual-title"><span>Built for everyday life</span><strong>One company. Multiple possibilities.</strong></div>
+          <div class="float-card c1"><div class="product-icon">⌂</div><small>Home</small><strong>Organisation & storage</strong></div>
+          <div class="float-card c2"><div class="product-icon">✈</div><small>Lifestyle</small><strong>Travel & everyday carry</strong></div>
+          <div class="float-card c3"><div class="product-icon">⌁</div><small>Smart Utility</small><strong>Electronics & innovations</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="brand-strip">
+    <div class="wrap strip-grid">
+      <div class="strip-item"><strong>Discover</strong><span>Consumer needs & opportunities</span></div>
+      <div class="strip-item"><strong>Develop</strong><span>Practical product solutions</span></div>
+      <div class="strip-item"><strong>Build</strong><span>Sourcing, quality & packaging</span></div>
+      <div class="strip-item"><strong>Deliver</strong><span>Digital-first market access</span></div>
+    </div>
+  </div>
+
+  <section class="section" id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="eyebrow">About Minnimo</p>
+        <p class="statement">We look at ordinary routines and ask a simple question: can this everyday experience be made better?</p>
+      </div>
+      <div class="about-copy reveal">
+        <p>Minnimo Products Pvt. Ltd. is a consumer products company focused on developing, sourcing and bringing thoughtfully designed everyday products to market.</p>
+        <p>Our work spans product research, vendor development, sourcing, packaging, branding, quality oversight and multi-channel distribution. Products are marketed primarily through our consumer brand <strong>REEPSO</strong>.</p>
+        <div class="fact-grid">
+          <div class="fact"><span>Company</span><strong>Minnimo Products Pvt. Ltd.</strong></div>
+          <div class="fact"><span>Consumer Brand</span><strong>REEPSO</strong></div>
+          <div class="fact"><span>Base</span><strong>Mumbai, Maharashtra, India</strong></div>
+          <div class="fact"><span>Focus</span><strong>Modern everyday consumer products</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section brand-section" id="brand">
+    <div class="wrap brand-panel">
+      <div class="brand-mark reveal">
+        <div>
+          <div class="reepso-word">r<span class="ee">ee</span>ps<span class="o">o</span></div>
+          <div class="tagline">Reinventing Everyday Living</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow">Our Consumer Brand</p>
+        <h2>REEPSO</h2>
+        <p class="lead">A modern lifestyle brand built around products that solve small everyday problems through thoughtful functionality, practical design and accessible innovation.</p>
+        <p>REEPSO is where our products meet consumers. Minnimo is the company behind the research, development, sourcing, quality, branding and commercial ecosystem that brings those products to life.</p>
+        <a class="btn btn-light" href="https://www.reepso.com/" target="_blank" rel="noopener">Visit REEPSO <span class="arrow">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section products" id="products">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">Product Portfolio</p><h2>Made for real life.</h2></div>
+        <p>Rather than building around a single category, Minnimo develops a growing portfolio of practical products across the routines of home, travel, work and everyday technology.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card reveal"><div class="orb"></div><span class="num">01</span><div><h3>Home & Organisation</h3><p>Storage covers, organisers and practical solutions designed to keep everyday spaces simpler and better organised.</p><a class="card-link" href="https://www.reepso.com/" target="_blank" rel="noopener">View on REEPSO <span class="arrow">↗</span></a></div></article>
+        <article class="product-card reveal"><div class="orb o2"></div><span class="num">02</span><div><h3>Travel & Lifestyle</h3><p>Wash bags, travel organisers, storage solutions and accessories designed around movement and convenience.</p><a class="card-link" href="https://www.reepso.com/" target="_blank" rel="noopener">View on REEPSO <span class="arrow">↗</span></a></div></article>
+        <article class="product-card reveal"><div class="orb o3"></div><span class="num">03</span><div><h3>Kitchen & Everyday Carry</h3><p>Lunch bags, tiffin solutions and functional products for everyday routines at home, work and on the move.</p><a class="card-link" href="https://www.reepso.com/" target="_blank" rel="noopener">View on REEPSO <span class="arrow">↗</span></a></div></article>
+        <article class="product-card reveal"><div class="orb o3"></div><span class="num">04</span><div><h3>Smart Electronics</h3><p>Charging accessories, cables, adapters, portable electronics and practical technology products for everyday use.</p><a class="card-link" href="https://www.reepso.com/" target="_blank" rel="noopener">View on REEPSO <span class="arrow">↗</span></a></div></article>
+        <article class="product-card reveal"><div class="orb o2"></div><span class="num">05</span><div><h3>Everyday Innovations</h3><p>Problem-solving utility products developed around small but meaningful improvements to daily life.</p><a class="card-link" href="https://www.reepso.com/" target="_blank" rel="noopener">View on REEPSO <span class="arrow">↗</span></a></div></article>
+        <article class="product-card reveal"><div class="orb"></div><span class="num">06</span><div><h3>Silicone & Utility</h3><p>Reusable and practical silicone-based products designed for convenience, utility and modern households.</p><a class="card-link" href="https://www.reepso.com/" target="_blank" rel="noopener">View on REEPSO <span class="arrow">↗</span></a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="process">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">What We Do</p><h2>From idea to everyday use.</h2></div>
+        <p>Our role goes beyond sourcing. We build the complete path that takes a product from an identified need to a market-ready consumer experience.</p>
+      </div>
+      <div class="process-grid reveal">
+        <div class="step"><b>01</b><h3>Discover</h3><p>Study consumer routines and identify useful product opportunities.</p></div>
+        <div class="step"><b>02</b><h3>Develop</h3><p>Refine functionality, usability, specifications and the product proposition.</p></div>
+        <div class="step"><b>03</b><h3>Source</h3><p>Work with suitable manufacturing and sourcing partners for each requirement.</p></div>
+        <div class="step"><b>04</b><h3>Evaluate</h3><p>Review samples, quality, usability, finish and overall product experience.</p></div>
+        <div class="step"><b>05</b><h3>Brand</h3><p>Build packaging, communication and a clear consumer-facing presentation.</p></div>
+        <div class="step"><b>06</b><h3>Deliver</h3><p>Prepare products for modern digital and marketplace-led distribution.</p></div>
+      </div>
+      <div class="values-grid reveal">
+        <div class="value"><h3>Useful by Design</h3><p>Every product should solve a genuine everyday need.</p></div>
+        <div class="value"><h3>Simple to Use</h3><p>Good products should feel intuitive and straightforward.</p></div>
+        <div class="value"><h3>Thoughtfully Developed</h3><p>Function, appearance, packaging and experience belong together.</p></div>
+        <div class="value"><h3>Made for Everyday Life</h3><p>Practical products built around real homes, routines and people.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="partner">
+    <div class="wrap">
+      <div class="partner-box reveal">
+        <div>
+          <p class="eyebrow">Business Partnerships</p>
+          <h2>Strong products begin with strong partnerships.</h2>
+        </div>
+        <div>
+          <p>We are open to meaningful relationships across product development, manufacturing, packaging, technology and distribution.</p>
+          <div class="partner-list">
+            <span class="pill">Manufacturing</span><span class="pill">Product Development</span><span class="pill">Packaging</span><span class="pill">Sourcing</span><span class="pill">Distribution</span><span class="pill">Technology</span>
+          </div>
+          <div style="margin-top:24px"><a class="btn btn-dark" href="mailto:info@minnimo.com">Talk to Minnimo <span class="arrow">→</span></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="eyebrow">Contact Minnimo</p>
+        <h2>Let’s build something useful.</h2>
+        <p class="lead">For business partnerships, vendor discussions or general enquiries, connect with our team.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px">
+          <a class="btn btn-light" href="mailto:info@minnimo.com">info@minnimo.com</a>
+          <a class="btn btn-ghost" href="tel:+919653423232">+91 96534 23232</a>
+        </div>
+      </div>
+      <div class="contact-card reveal">
+        <div class="contact-row"><span>Registered & Corporate Office</span><strong>A206, 2nd Floor, Krishvi Escape,<br>Sitaram Poddar Marg, Kalbadevi,<br>Mumbai – 400002, Maharashtra, India</strong></div>
+        <div class="contact-row"><span>Consumer Brand</span><a href="https://www.reepso.com/" target="_blank" rel="noopener">REEPSO — www.reepso.com ↗</a></div>
+        <div class="contact-row"><span>GSTIN</span><strong>27AAVCM0632N1ZW</strong></div>
+        <div class="contact-row"><span>PAN</span><strong>AAVCM0632N</strong></div>
+      </div>
+    </div>
+    <div class="legal">
+      <div>© <span id="year"></span> Minnimo Products Pvt. Ltd. All rights reserved.</div>
+      <div>REEPSO — Reinventing Everyday Living</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const header=document.getElementById('header');
+  const menuBtn=document.getElementById('menuBtn');
+  const links=document.getElementById('links');
+  window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>20));
+  menuBtn.addEventListener('click',()=>{const open=links.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open);menuBtn.textContent=open?'×':'☰';});
+  document.querySelectorAll('#links a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
+  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
