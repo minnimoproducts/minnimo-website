@@ -1622,6 +1622,22 @@ img{height:auto;}
 .process-photo img,.cat-stage img{contain:paint;}
 </style>
 
+
+<style>
+/* ===== V6.8 STICKY HEADER ANCHOR FIX =====
+   Desktop header = 88px. Give anchored sections a small breathing gap below it.
+   Tablet/mobile header = 72px, so use a smaller offset there.
+*/
+section[id]{
+  scroll-margin-top:108px;
+}
+@media (max-width:920px){
+  section[id]{
+    scroll-margin-top:90px;
+  }
+}
+</style>
+
 </head>
 <body>
 <div class="topbar"><div class="wrap">
@@ -1856,6 +1872,23 @@ document.querySelectorAll('[data-carousel]').forEach((carousel,ci)=>{
 
   window.addEventListener('resize', () => {
     if (window.innerWidth > 1100) closeMenu();
+  });
+})();
+</script>
+
+
+<script>
+/* ===== V6.8 HOME / STICKY-HEADER NAVIGATION FIX =====
+   #home must return to the true top of the document.
+   Other section anchors use CSS scroll-margin-top above.
+*/
+(() => {
+  document.querySelectorAll('a[href="#home"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      history.replaceState(null, '', window.location.pathname + window.location.search + '#home');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   });
 })();
 </script>
